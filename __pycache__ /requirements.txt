@@ -1,0 +1,9 @@
+﻿streamlit
+pymongo
+pandas
+plotly
+scikit-learn
+numpy
+prophet
+python-dotenv    # opcional para desenvolvimento local
+fpdf2
