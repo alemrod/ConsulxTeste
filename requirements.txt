@@ -1,22 +1,11 @@
-# --- Core dependencies ---
 streamlit==1.39.0
 pandas==2.2.2
 numpy==1.26.4
-
-# --- Visualização e gráficos ---
 plotly==5.24.1
-kaleido==0.2.1  # necessário para salvar gráficos em PNG no PDF
-
-# --- Modelagem preditiva ---
+kaleido==0.2.1
 prophet==1.1.5
 scikit-learn==1.5.2
-
-# --- PDFs e utilidades ---
 fpdf2==2.7.9
-
-# --- Banco de dados MongoDB ---
 pymongo==4.10.1
-
-# --- Outras dependências úteis ---
 python-dateutil==2.9.0.post0
 requests==2.32.3
