@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.env
+.env.*
+.venv/
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data / outputs pesados
+balancetes/
+data/
+*.sqlite3
+*.db
+
+# System
+.DS_Store

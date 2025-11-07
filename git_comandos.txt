@@ -1,0 +1,7 @@
+git status --verifica se há diferenças entre o repositório local e em nuvem. IMPORTANTE RODAR ISSO ANTES DE SUBIR ALTERAÇÕES
+git stash -- salva suas mudanças locais e limpa o diretório
+git pull origin main -- baixa as atualizações do repositório remoto.
+git stash pop --reaplica suas mudanças sobre o novo código atualizado.
+git add . -- adiciona tudo que foi alterado
+git commit -m "minhas alterações locais" --comita as alterações do repositório
+git push origin main -- sobe as mudanças no repositório
