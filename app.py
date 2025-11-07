@@ -134,16 +134,34 @@ def processar_indicadores_financeiros(df):
 # ------------------------------
 def prophet_forecast_series(df, target_col, months=3):
     """
-    Recebe DataFrame indexado por 'mes' (YYYY-MM) e retorna forecast DataFrame com 'ds' e 'yhat', 'yhat_lower','yhat_upper'
-    para os próximos `months`.
+    Substitui Prophet por ARIMA para previsão de 3 meses (compatível com Streamlit Cloud)
     """
     if df.empty or target_col not in df.columns:
         return pd.DataFrame()
+
     df_temp = df[[target_col]].reset_index().rename(columns={"mes": "ds", target_col: "y"})
     df_temp["ds"] = pd.to_datetime(df_temp["ds"] + "-01", errors="coerce")
     df_temp = df_temp.dropna()
-    if len(df_temp) < 3:
-        return pd.DataFrame()  # dados insuficientes
+    if len(df_temp) < 4:
+        return pd.DataFrame()
+
+    try:
+        model = ARIMA(df_temp["y"], order=(1, 1, 1))
+        model_fit = model.fit()
+        forecast = model_fit.forecast(steps=months)
+        future_dates = pd.date_range(df_temp["ds"].iloc[-1], periods=months + 1, freq="MS")[1:]
+        forecast_df = pd.DataFrame({
+            "ds": future_dates,
+            "mes": future_dates.strftime("%Y-%m"),
+            "yhat": forecast.values,
+            "yhat_lower": forecast.values * 0.95,
+            "yhat_upper": forecast.values * 1.05
+        })
+        return forecast_df
+    except Exception as e:
+        st.warning(f"Erro ao gerar previsão com ARIMA: {e}")
+        return pd.DataFrame()
+
 
     model = Prophet(interval_width=0.9, yearly_seasonality=True, weekly_seasonality=False, daily_seasonality=False)
     try:
