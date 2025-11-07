@@ -847,5 +847,130 @@ with abas[2]:
 with abas[3]:  # Aba "Analítico"
     st.subheader("Métricas do Balancete")
     indicadores_historicos
+
     
-    
+
+    # ================================================
+# 🔹 RELATÓRIO FINANCEIRO CONSULX (Fundo Preto)
+# ================================================
+with st.sidebar:
+    st.markdown("---")
+    gerar_pdf = st.button("📊 Gerar Relatório Financeiro")
+
+if gerar_pdf:
+    with st.spinner("Gerando Relatório Financeiro ConsulX..."):
+
+        class PDFRelatorio(FPDF):
+            def header(self):
+                # Logo superior
+                self.image("favicon.png", 10, 8, 20)
+                self.set_font("Helvetica", "B", 16)
+                self.set_text_color(255, 255, 255)
+                self.cell(0, 10, "Relatório Financeiro - ConsulX", ln=True, align="C")
+                self.ln(10)
+
+            def footer(self):
+                self.set_y(-15)
+                self.set_font("Helvetica", "I", 9)
+                self.set_text_color(180, 180, 180)
+                self.cell(0, 10, f"Página {self.page_no()}", align="C")
+
+        pdf = PDFRelatorio("P", "mm", "A4")
+        pdf.set_auto_page_break(auto=True, margin=15)
+        pdf.add_page()
+
+        # Fundo preto
+        pdf.set_fill_color(0, 0, 0)
+        pdf.rect(0, 0, 210, 297, "F")
+
+        # Título centralizado
+        pdf.set_font("Helvetica", "B", 20)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(0, 20, "📘 Relatório Financeiro ConsulX", ln=True, align="C")
+
+        pdf.set_font("Helvetica", "", 12)
+        pdf.ln(10)
+        pdf.multi_cell(0, 10,
+            "Este relatório resume os principais indicadores financeiros e de desempenho "
+            "da empresa analisada. Os dados foram processados e visualizados via plataforma "
+            "ConsulX, utilizando indicadores contábeis e modelos preditivos para insights "
+            "estratégicos."
+        )
+
+        # =======================
+        # 🔹 Seção: Indicadores
+        # =======================
+        pdf.ln(12)
+        pdf.set_font("Helvetica", "B", 16)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(0, 12, "📈 Indicadores Financeiros", ln=True)
+
+        pdf.set_font("Helvetica", "", 11)
+        for ind in indicadores:
+            pdf.set_text_color(230, 230, 230)
+            pdf.multi_cell(0, 8,
+                f"- {ind['titulo']}: {ind['valor']} ({ind['memoria']})\n"
+                f"  {ind['descricao']}\n"
+            )
+            pdf.ln(1)
+
+        # =======================
+        # 🔹 Seção: Resumo Contábil
+        # =======================
+        pdf.ln(8)
+        pdf.set_font("Helvetica", "B", 16)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(0, 12, "💰 Resumo Contábil", ln=True)
+
+        pdf.set_font("Helvetica", "", 12)
+        pdf.set_text_color(230, 230, 230)
+        pdf.cell(0, 10, f"Faturamento: R$ {receita_bruta:,.2f}", ln=True)
+        pdf.cell(0, 10, f"Receita Líquida: R$ {receita_liquida:,.2f}", ln=True)
+        pdf.cell(0, 10, f"Lucro Bruto: R$ {lucro_bruito:,.2f}", ln=True)
+        pdf.cell(0, 10, f"Lucro Líquido: R$ {lucro_liquido:,.2f}", ln=True)
+        pdf.cell(0, 10, f"Disponibilidade de Caixa: R$ {disponibilidade_caixa:,.2f}", ln=True)
+
+        # =======================
+        # 🔹 Seção: Projeção
+        # =======================
+        pdf.ln(12)
+        pdf.set_font("Helvetica", "B", 16)
+        pdf.set_text_color(255, 255, 255)
+        pdf.cell(0, 12, "📊 Projeção de Liquidez Imediata", ln=True)
+
+        pdf.set_font("Helvetica", "", 11)
+        pdf.set_text_color(230, 230, 230)
+        pdf.multi_cell(0, 8,
+            "Utilizando o modelo Prophet, projetamos os próximos 6 meses de Liquidez Imediata. "
+            "A previsão é baseada nas tendências dos últimos 3 anos e serve como suporte para "
+            "planejamento de fluxo de caixa e decisões financeiras."
+        )
+
+        # Inserir imagem do gráfico (gerada dinamicamente)
+        fig_previsao.write_image("temp_forecast.png", scale=2, width=900, height=500)
+        pdf.image("temp_forecast.png", x=10, y=None, w=190)
+        os.remove("temp_forecast.png")
+
+        # =======================
+        # 🔹 Conclusão
+        # =======================
+        pdf.ln(10)
+        pdf.set_font("Helvetica", "I", 12)
+        pdf.set_text_color(200, 200, 200)
+        pdf.multi_cell(0, 10,
+            "Este relatório foi gerado automaticamente pela plataforma ConsulX. "
+            "Todos os cálculos e projeções são baseados em dados históricos processados "
+            "e modelagem estatística. Recomenda-se uso profissional e análise crítica dos resultados."
+        )
+
+        # Salvar em arquivo temporário
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            pdf.output(tmp.name)
+            pdf_path = tmp.name
+
+        with open(pdf_path, "rb") as f:
+            b64 = base64.b64encode(f.read()).decode("utf-8")
+            href = f'<a href="data:application/pdf;base64,{b64}" download="Relatorio_Financeiro_ConsulX.pdf">📥 Baixar Relatório PDF</a>'
+            st.markdown(href, unsafe_allow_html=True)
+
+        st.success("✅ Relatório Financeiro gerado com sucesso!")
