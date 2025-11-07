@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+plotly
+prophet
+fpdf2
+kaleido
+scikit-learn
+pymongo
