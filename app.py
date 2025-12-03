@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 # ======================
 # CONFIGURAÇÕES GERAIS
 # ======================
-st.set_page_config(page_title="ConsulxTeste - Dashboard Contábil",
+st.set_page_config(page_title="ConsulX - Dashboard Contábil",
                    page_icon="favicon.png", layout="wide")
 # ======================== LÊ TODOS OS BALANCETES TEMPORAIS ========================
 option = st.selectbox(
@@ -32,10 +32,10 @@ with st.spinner("Carregando dados do MongoDB (isso pode demorar na primeira vez)
 
     if option == "Casa do Norte Piuaizinho":
         all_rows = load_all_rows_from_mongo(
-            db_name="ConsulxTeste_db", coll_name="industrial_nordeste", limit=None)
+            db_name="ConsulX_db", coll_name="industrial_nordeste", limit=None)
     else:
         all_rows = load_all_rows_from_mongo(
-            db_name="ConsulxTeste_db", coll_name="Industria_Tecno_Metais", limit=None)
+            db_name="ConsulX_db", coll_name="Industria_Tecno_Metais", limit=None)
     
     #all_rows = load_all_rows_from_mongo(db_name="ConsulX_db", coll_name="Industria_Tecno_Metais", limit=None)
 
