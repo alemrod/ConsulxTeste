@@ -1,0 +1,393 @@
+{
+  "metadata": {
+    "razao_social": "INDUSTRIAL NORDESTE LTDA",
+    "periodo": "01/01/2022 - 31/01/2022",
+    "emissao": "31/01/2022 15:37:46"
+  },
+  "ativo": {
+    "conta": "01",
+    "descricao": "ATIVO",
+    "children": [
+      {
+        "conta": "01.1",
+        "descricao": "ATIVO CIRCULANTE",
+        "children": [
+          {
+            "conta": "01.1.1",
+            "descricao": "DISPONIBILIDADES",
+            "children": [
+              {
+                "conta": "01.1.1.01",
+                "descricao": "CAIXA",
+                "children": [
+                  {
+                    "conta": "01.1.1.01.001",
+                    "descricao": "Caixa",
+                    "saldo_anterior": 32764.25,
+                    "debito": 61771.29,
+                    "credito": 10577.77,
+                    "saldo_atual": 83957.77
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "conta": "01.1.2",
+            "descricao": "DIREITOS REALIZÁVEIS A CURTO PRAZO",
+            "children": [
+              {
+                "conta": "01.1.2.01",
+                "descricao": "CLIENTES NACIONAIS",
+                "children": [
+                  {
+                    "conta": "01.1.2.01.001",
+                    "descricao": "Clientes nacionais",
+                    "saldo_anterior": 38552.84,
+                    "debito": 0.0,
+                    "credito": 0.0,
+                    "saldo_atual": 38552.84
+                  }
+                ]
+              },
+              {
+                "conta": "01.1.2.08",
+                "descricao": "TRIBUTOS E CONTRIBUIÇÕES A COMPENSAR",
+                "children": [
+                  {
+                    "conta": "01.1.2.08.001",
+                    "descricao": "ICMS a Recuperar",
+                    "saldo_anterior": 0.0,
+                    "debito": 768.11,
+                    "credito": 0.0,
+                    "saldo_atual": 768.11
+                  }
+                ]
+              },
+              {
+                "conta": "01.1.2.10",
+                "descricao": "ESTOQUES",
+                "children": [
+                  {
+                    "conta": "01.1.2.10.001",
+                    "descricao": "Estoque de Mercadoria Para Revenda",
+                    "saldo_anterior": 0.0,
+                    "debito": 12675.83,
+                    "credito": 0.0,
+                    "saldo_atual": 12675.83
+                  }
+                ]
+              },
+              {
+                "conta": "01.1.2.12",
+                "descricao": "REMESSA DE PRODUTOS/MERCADORIAS",
+                "children": [
+                  {
+                    "conta": "01.1.2.12.001",
+                    "descricao": "Remessa de Produtos/Mercadorias",
+                    "saldo_anterior": 14323.6,
+                    "debito": 0.0,
+                    "credito": 0.0,
+                    "saldo_atual": 14323.6
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "conta": "01.2",
+        "descricao": "ATIVO NÃO CIRCULANTE",
+        "children": [
+          {
+            "conta": "01.2.3",
+            "descricao": "IMOBILIZADO",
+            "children": [
+              {
+                "conta": "01.2.3.01",
+                "descricao": "BENS E DIREITOS EM USO",
+                "children": [
+                  {
+                    "conta": "01.2.3.01.001",
+                    "descricao": "Máquinas e Equipamentos",
+                    "saldo_anterior": 0.0,
+                    "debito": 19366.33,
+                    "credito": 0.0,
+                    "saldo_atual": 19366.33
+                  }
+                ]
+              },
+              {
+                "conta": "01.2.3.05",
+                "descricao": "(-) DEPRECIAÇÃO ACUMULADA",
+                "children": [
+                  {
+                    "conta": "01.2.3.05.001",
+                    "descricao": "(-) Máquinas e equipamentos",
+                    "saldo_anterior": 0.0,
+                    "debito": 0.0,
+                    "credito": 194.92,
+                    "saldo_atual": -194.92
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "passivo": {
+    "conta": "02",
+    "descricao": "PASSIVO",
+    "children": [
+      {
+        "conta": "02.1",
+        "descricao": "PASSIVO CIRCULANTE",
+        "children": [
+          {
+            "conta": "02.1.1",
+            "descricao": "FORNECEDORES",
+            "children": [
+              {
+                "conta": "02.1.1.01.000007895",
+                "descricao": "REZENDE CENTRO COMERCIAL AUTOMOTIVO LTDA",
+                "saldo_anterior": 2406.3,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 2406.3
+              },
+              {
+                "conta": "02.1.1.01.001803522",
+                "descricao": "VPMB MARCAS E PATENTES LTDA",
+                "saldo_anterior": 2685.41,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 2685.41
+              },
+              {
+                "conta": "02.1.1.01.001804167",
+                "descricao": "Comercial Artmaq Ltda EPP",
+                "saldo_anterior": 2661.9,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 2661.9
+              },
+              {
+                "conta": "02.1.1.01.001837450",
+                "descricao": "FRIGELAR COMERCIO E INDUSTRIA LTDA",
+                "saldo_anterior": 0.0,
+                "debito": 0.0,
+                "credito": 8936.29,
+                "saldo_atual": 8936.29
+              },
+              {
+                "conta": "02.1.1.01.001837451",
+                "descricao": "FRIGELAR COMERCIO E INDUSTRIA LTDA (dup.)",
+                "saldo_anterior": 0.0,
+                "debito": 0.0,
+                "credito": 5008.99,
+                "saldo_atual": 5008.99
+              }
+            ]
+          },
+          {
+            "conta": "02.1.2",
+            "descricao": "EMPRÉSTIMOS E FINANCIAMENTOS",
+            "children": [
+              {
+                "conta": "02.1.2.01.010",
+                "descricao": "Banco Bradesco S/A",
+                "saldo_anterior": 27868.0,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 27868.0
+              }
+            ]
+          },
+          {
+            "conta": "02.1.3",
+            "descricao": "OBRIGAÇÕES TRABALHISTAS",
+            "children": [
+              {
+                "conta": "02.1.3.01.001",
+                "descricao": "Salários a pagar",
+                "saldo_anterior": 20846.22,
+                "debito": 0.0,
+                "credito": 6725.05,
+                "saldo_atual": 27571.27
+              },
+              {
+                "conta": "02.1.3.04.001",
+                "descricao": "INSS a pagar",
+                "saldo_anterior": 5104.49,
+                "debito": 0.0,
+                "credito": 663.17,
+                "saldo_atual": 5767.66
+              }
+            ]
+          },
+          {
+            "conta": "02.1.4",
+            "descricao": "OBRIGAÇÕES TRIBUTÁRIAS",
+            "children": [
+              {
+                "conta": "02.1.4.01.001",
+                "descricao": "IRRF a Recolher",
+                "saldo_anterior": 466.69,
+                "debito": 0.0,
+                "credito": 58.42,
+                "saldo_atual": 525.11
+              },
+              {
+                "conta": "02.1.4.01.002",
+                "descricao": "IRRF a Recolher - Pessoa Jurídica",
+                "saldo_anterior": 50.57,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 50.57
+              },
+              {
+                "conta": "02.1.4.01.006",
+                "descricao": "INSS Retido a Recolher",
+                "saldo_anterior": 313.96,
+                "debito": 0.0,
+                "credito": 0.0,
+                "saldo_atual": 313.96
+              },
+              {
+                "conta": "02.1.4.03.001",
+                "descricao": "ICMS a Pagar",
+                "saldo_anterior": -104.84,
+                "debito": 0.0,
+                "credito": 950.71,
+                "saldo_atual": 845.86
+              },
+              {
+                "conta": "02.1.4.03.006",
+                "descricao": "SIMPLES a Pagar",
+                "saldo_anterior": 21447.36,
+                "debito": 0.0,
+                "credito": 5204.6,
+                "saldo_atual": 26651.96
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "conta": "02.2",
+        "descricao": "PASSIVO NÃO CIRCULANTE",
+        "children": [
+          {
+            "conta": "02.2.1.02.002",
+            "descricao": "Bens Remetidos para Teste",
+            "saldo_anterior": 12521.64,
+            "debito": 0.0,
+            "credito": 0.0,
+            "saldo_atual": 12521.64
+          }
+        ]
+      },
+      {
+        "conta": "02.3",
+        "descricao": "PATRIMÔNIO LÍQUIDO",
+        "children": [
+          {
+            "conta": "02.3.1.01.002",
+            "descricao": "Capital Social Integralizado",
+            "saldo_anterior": 6690.23,
+            "debito": 0.0,
+            "credito": 0.0,
+            "saldo_atual": 6690.23
+          },
+          {
+            "conta": "02.3.2.02.001",
+            "descricao": "Reserva de Lucros",
+            "saldo_anterior": 64372.4,
+            "debito": 0.0,
+            "credito": 0.0,
+            "saldo_atual": 64372.4
+          }
+        ]
+      }
+    ]
+  },
+  "receitas": {
+    "conta": "03",
+    "descricao": "RECEITAS",
+    "children": [
+      {
+        "conta": "03.1.1.03.002",
+        "descricao": "Serviços Prestados a Prazo",
+        "saldo_anterior": 278572.84,
+        "debito": 0.0,
+        "credito": 70104.53,
+        "saldo_atual": 348677.37
+      },
+      {
+        "conta": "03.1.2.02.008",
+        "descricao": "Simples Nacional sobre vendas e serviços",
+        "saldo_anterior": -30293.67,
+        "debito": 4634.36,
+        "credito": 0.0,
+        "saldo_atual": -34928.03
+      }
+    ]
+  },
+  "custos_despesas": {
+    "conta": "04",
+    "descricao": "CUSTOS E DESPESAS",
+    "children": [
+      {
+        "conta": "04.2.1.01.001",
+        "descricao": "Salários",
+        "saldo_anterior": 29673.16,
+        "debito": 8568.25,
+        "credito": 0.0,
+        "saldo_atual": 38241.41
+      },
+      {
+        "conta": "04.2.1.99.013",
+        "descricao": "Depreciações e Amortizações",
+        "saldo_anterior": 0.0,
+        "debito": 144.13,
+        "credito": 0.0,
+        "saldo_atual": 144.13
+      },
+      {
+        "conta": "04.2.1.99.015",
+        "descricao": "Fretes e Carretos",
+        "saldo_anterior": 0.0,
+        "debito": 541.87,
+        "credito": 0.0,
+        "saldo_atual": 541.87
+      },
+      {
+        "conta": "04.2.1.99.020",
+        "descricao": "Serviços de Terceiros - Pessoa Jurídica",
+        "saldo_anterior": 271957.69,
+        "debito": 0.0,
+        "credito": 0.0,
+        "saldo_atual": 271957.69
+      },
+      {
+        "conta": "04.2.2.02.001",
+        "descricao": "Juros",
+        "saldo_anterior": 102.92,
+        "debito": 0.0,
+        "credito": 0.0,
+        "saldo_atual": 102.92
+      },
+      {
+        "conta": "04.2.2.02.003",
+        "descricao": "Multas",
+        "saldo_anterior": 1021.86,
+        "debito": 0.0,
+        "credito": 0.0,
+        "saldo_atual": 1021.86
+      }
+    ]
+  }
+}
